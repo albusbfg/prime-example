@@ -3,13 +3,16 @@ from datetime import datetime
 
 def sieve_of_eratosthenes(limit: int) -> list:
     """Use the sieve of Eratosthenes to find all prime numbers up to a limit.
-    
-    1. Create a list of consecutive integers from 2 through n: (2, 3, 4, ..., n).
+    1. Create a list of consecutive integers from 2 through n: (2, 3, ..., n).
     2. Let p equal 2, the first prime number.
-    3. Starting from p, count up in increments of p and mark each of these numbers greater than p itself in the list.
-    4. Find the first number greater than p in the list that is not marked. If there was no such number, stop.
-    5. Otherwise, let p now equal this new number (which is the next prime), and repeat from step 3.
-    6. When the algorithm terminates, the unmarked numbers in the list are all the prime numbers below n.
+    3. Starting from p, count up in increments of p and mark each of these
+        numbers greater than p itself in the list.
+    4. Find the first number greater than p in the list that is not marked. If
+        there was no such number, stop.
+    5. Otherwise, let p now equal this new number (which is the next prime),
+        and repeat from step 3.
+    6. When the algorithm terminates, the unmarked numbers in the list are all
+        the prime numbers below n.
 
     Args:
         limit (int): Up to which number to find prime numbers.
